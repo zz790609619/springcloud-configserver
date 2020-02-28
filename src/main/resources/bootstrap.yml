@@ -1,0 +1,17 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka #注册到注册中心
+  instance:
+    prefer-ip-address: true #显示ip
+spring:
+  application:
+    name: zuceHost #在注册中心显示的主机名
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zz790609619/configRes
+          username: 790609619@qq.com #github的账户名
+          password: ww999521@ #gitHub的密码
+          clone-on-start: true
